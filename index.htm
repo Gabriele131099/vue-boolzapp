@@ -26,13 +26,25 @@
                     <li>O</li>
                 </ul>
             </div>
-            <div class="nav-notifica">
+            <div class="nav-notifica bordo">
+                <i class="far fa-bell-slash circle"></i>
                 <h3>Ricevi notifiche di nuovi messaggi</h3>
                 <span><a href="">Attiva notifiche Desktop</a></span>
             </div>
+            <div class="bordo ">
+                <i class="fas fa-search"></i>
+                <input type="search" placeholder="Inizia una nuova chat">
+            </div>
+            <div v-for="(contatto, index) in contacts" @click="moveTo(index)" class="bordo manina-puntatore">
+                <img :src="contatto.user" alt="">
+                {{contatto.name}}
+            </div>
         </aside>
-        <section class="message-chat col-6" >
-            {{contacts[indexContacts].messages[indexMessage].text}}
+        <section class="message-chat col-6">
+           <div >
+            <img :src="contacts[indexContacts].user" alt="">
+            {{contacts[indexContacts].name}}
+           </div>
         </section>
 
     </div>
