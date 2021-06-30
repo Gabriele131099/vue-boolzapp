@@ -18,12 +18,14 @@
     <div id="app">
         <aside class="contact-list col-4">
             <div class="nav-contact-list">
-                <img src="./img/avatar_io.jpg" alt="">
-                <h4>Gabriele Sanna</h4>
+                <div class="d-flex align-items-center">
+                    <img src="./img/avatar_io.jpg" alt="">
+                    <h4>Gabriele Sanna</h4>    
+                </div>
                 <ul id="icon-userName">
-                    <li>O</li>
-                    <li>O</li>
-                    <li>O</li>
+                    <li><i class="fas fa-circle-notch"></i></i></li>
+                    <li><i class="fas fa-comment-alt"></i></i></li>
+                    <li><i class="fas fa-ellipsis-v"></i></li>
                 </ul>
             </div>
             <div class="nav-notifica bordo">
@@ -41,16 +43,16 @@
             </div>
         </aside>
         <section class="message-chat col-6">
-           <div class="nav-contact-list">
+           <div class="nav-user">
                 <img :src="contacts[indexContacts].user" alt="">
                 <div class="d-flex column">
                     <div>{{contacts[indexContacts].name}}</div>
                     <div>Ultimo accesso {{contacts[indexContacts].messages[indexMessage].date}}</div>
                 </div>
-                <div class="text-area">
+            </div>
+            <div class="text-area">
 
-                </div>
-           </div>
+            </div>
         </section>
 
     </div>

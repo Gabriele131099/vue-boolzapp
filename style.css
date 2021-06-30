@@ -28,9 +28,10 @@ img
 .nav-contact-list
 {
     display: flex;
-    align-items:center;
     border-bottom: 1px solid black;
     padding: 10px 5px;
+    justify-content: space-between;
+    align-items: center;
 }
 #icon-userName
 {
@@ -53,6 +54,12 @@ img
 {
     cursor:pointer;
 }
+.nav-user
+{
+    display: flex;
+    border-bottom: 1px solid black;
+    padding: 10px 5px;
+}
 .column
 {
     flex-direction: column;
@@ -60,5 +67,5 @@ img
 }
 .text-area
 {
-    background-color: url('/img/mine.jpg');
+    background-image: url("./img/mine.jpg");
 }

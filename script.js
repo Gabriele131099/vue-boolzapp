@@ -121,7 +121,7 @@ new Vue(
                      this.indexContacts++
                  },
                  prev:function () {
-                     if (this.indexContacts === 0) 
+                     if (this.indexContacts === 0 ) 
                          {
                              this.indexContacts = this.contacts.length -1
                          }else{
