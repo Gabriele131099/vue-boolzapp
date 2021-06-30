@@ -53,3 +53,12 @@ img
 {
     cursor:pointer;
 }
+.column
+{
+    flex-direction: column;
+    justify-content: center;
+}
+.text-area
+{
+    background-color: url('/img/mine.jpg');
+}

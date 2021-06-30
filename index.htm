@@ -41,9 +41,15 @@
             </div>
         </aside>
         <section class="message-chat col-6">
-           <div >
-            <img :src="contacts[indexContacts].user" alt="">
-            {{contacts[indexContacts].name}}
+           <div class="nav-contact-list">
+                <img :src="contacts[indexContacts].user" alt="">
+                <div class="d-flex column">
+                    <div>{{contacts[indexContacts].name}}</div>
+                    <div>Ultimo accesso {{contacts[indexContacts].messages[indexMessage].date}}</div>
+                </div>
+                <div class="text-area">
+
+                </div>
            </div>
         </section>
 
