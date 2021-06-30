@@ -1,0 +1,48 @@
+#green-row
+{
+    background-color: green;
+    height: 200px;
+}
+#back-ground
+{
+    background-color: grey;
+}
+
+#app
+{
+    display: flex;
+    justify-content: center;
+}
+.contact-list,.message-chat
+{
+    background-color: white;
+    height: 500px;
+    border: 1px solid black;
+    position: relative;
+    top: -100px;
+}
+.contact-list img
+{
+    width: 70px;
+    border-radius: 50%;
+}
+.nav-contact-list
+{
+    display: flex;
+    align-items:center;
+    border-bottom: 1px solid black;
+    padding: 10px 5px;
+}
+#icon-userName
+{
+    list-style-type: none;
+    display: flex;
+}
+#icon-userName li 
+{
+    padding: 10px 15px;
+}
+.nav-notifica
+{
+    
+}
