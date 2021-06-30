@@ -11,15 +11,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
 </head>
-<body >
-    <nav >
+<body id="back-ground">
+    <nav id="green-row">
 
     </nav>
     <div id="app">
-       
-       
-            {{contacts[indexContacts].messagges[indexMessage]}}
-    
+        <aside class="contact-list col-4">
+            <div class="nav-contact-list">
+                <img src="./img/avatar_io.jpg" alt="">
+                <h4>Gabriele Sanna</h4>
+                <ul id="icon-userName">
+                    <li>O</li>
+                    <li>O</li>
+                    <li>O</li>
+                </ul>
+            </div>
+            <div class="nav-notifica">
+                <h3>Ricevi notifiche di nuovi messaggi</h3>
+                <span><a href="">Attiva notifiche Desktop</a></span>
+            </div>
+        </aside>
+        <section class="message-chat col-6" >
+            {{contacts[indexContacts].messages[indexMessage].text}}
+        </section>
 
     </div>
     <script src="./script.js"></script>
