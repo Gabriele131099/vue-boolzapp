@@ -114,15 +114,7 @@ new Vue(
              methods: {
                  moveTo: function (index) {
                      this.indexContacts = index
-                 },
-                 isCourentDot: function (index) {
-                     if (index === this.indexContacts) {
-                         return 'current' 
-                         return indexContacts
-                     } else {
-                         return ''
-                     }
-                 },
+                 }, //come lo uso per scrivere i messaggi 
                 moveTob: function (index) {
                     this.indexMessage = index
                 },
