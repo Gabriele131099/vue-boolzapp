@@ -16,8 +16,8 @@
 
     </nav>
     <div id="app">
-        <aside class="contact-list col-4">
-            <div class="nav-contact-list">
+        <aside class="contact-list col-xl-3 col-md-5 col-xs-6">
+            <div class="nav-contact-list ">
                 <div class="d-flex align-items-center">
                     <img src="./img/avatar_io.jpg" alt="">
                     <h4>Gabriele Sanna</h4>    
@@ -28,21 +28,26 @@
                     <li><i class="fas fa-ellipsis-v"></i></li>
                 </ul>
             </div>
-            <div class="nav-notifica bordo">
+            <div class="nav-notifica ">
+                
                 <i class="far fa-bell-slash circle"></i>
-                <h3>Ricevi notifiche di nuovi messaggi</h3>
-                <span><a href="">Attiva notifiche Desktop</a></span>
+                <span>
+                    <div>Ricevi notifiche di nuovi messaggi</div>
+                    <a href="">Attiva notifiche Desktop</a>
+                </span>
             </div>
-            <div class="bordo ">
+            <div class="search ">
                 <i class="fas fa-search"></i>
                 <input type="search" placeholder="Inizia una nuova chat">
             </div>
-            <div v-for="(contatto, index) in contacts" @click="moveTo(index)" class="bordo manina-puntatore">
-                <img :src="contatto.user" alt="">
-                {{contatto.name}}
+            <div class="scroll">
+                <div v-for="(contatto, index) in contacts" @click="moveTo(index)" class=" manina-puntatore">
+                    <img :src="contatto.user" alt="">
+                    {{contatto.name}}
+                </div>
             </div>
         </aside>
-        <section class="message-chat col-6">
+        <section class="message-chat col-xs-6 col-md-5 col-xl-4">
            <div class="nav-user">
                 <img :src="contacts[indexContacts].user" alt="">
                 <div class="d-flex column">
@@ -51,6 +56,9 @@
                 </div>
             </div>
             <div class="text-area">
+
+            </div>
+            <div class="nav-typing">
 
             </div>
         </section>

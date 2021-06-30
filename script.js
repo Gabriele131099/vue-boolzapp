@@ -112,23 +112,6 @@ new Vue(
                 }, interval);
              },
              methods: {
-                 next:function () {
-                     if (this.indexContacts === (this.contacts.length -1)) 
-                         {
-                             this.indexContacts = 0
-                         }
-                     
-                     this.indexContacts++
-                 },
-                 prev:function () {
-                     if (this.indexContacts === 0 ) 
-                         {
-                             this.indexContacts = this.contacts.length -1
-                         }else{
-     
-                             this.indexContacts--
-                         }
-                 },
                  moveTo: function (index) {
                      this.indexContacts = index
                  },
@@ -140,23 +123,6 @@ new Vue(
                          return ''
                      }
                  },
-                 nextb:function () {
-                    if (this.indexMessage === (this.contacts.messages.length -1)) 
-                        {
-                            this.indexMessage = 0
-                        }
-                    
-                    this.indexMessage++
-                },
-                prevb:function () {
-                    if (this.indexMessage === 0) 
-                        {
-                            this.indexMessage = this.contacts.messages.length -1
-                        }else{
-    
-                            this.indexMessage--
-                        }
-                },
                 moveTob: function (index) {
                     this.indexMessage = index
                 },
