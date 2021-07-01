@@ -97,7 +97,8 @@ new Vue(
                 },
             ],
             indexContacts :0,
-            indexMessage:0
+            indexMessage:0,
+            newTask : ''
             },
 
             created(){
@@ -110,9 +111,6 @@ new Vue(
                  moveTo: function (index) {
                      this.indexContacts = index
                  },  
-                moveTob: function (index) {
-                    this.indexMessage = index
-                },
                 contactMessage: function(index)
                 {   
                     let status = this.contacts[this.indexContacts].messages[index].status

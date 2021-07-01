@@ -38,7 +38,7 @@
             </div>
             <div class="search ">
                 <i class="fas fa-search"></i>
-                <input type="search" placeholder="Inizia una nuova chat">
+                <input type="search" placeholder="Inizia una nuova chat" v-model="newTask" @keyup.enter="addTask()">
             </div>
             <ul class="scroll">
                 <li v-for="(contatto, index) in contacts" @click="moveTo(index)" class=" manina-puntatore">
@@ -57,18 +57,18 @@
             </div>
             <div class="text-area">
                 
-                <div v-for="(message,index) in contacts[indexContacts].messages">
-                    <div :class="contactMessage(index)">
+              
+                    <div :class="contactMessage(index)" v-for="(message,index) in contacts[indexContacts].messages">
                         <div>{{message.text}}</div>
                         <div class="date"> {{message.date}} {{message.status}}</div>
                     </div>
-                </div>
+             
  
             </div>
             <div class="nav-typing">
                 <i class="far fa-smile"></i>
                 <div>
-                    <input class="" type="text">
+                    <input type="text"  >
                 </div>
                 <i class="fas fa-microphone"></i>
             </div>
