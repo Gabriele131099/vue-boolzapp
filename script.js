@@ -7,7 +7,8 @@ new Vue(
             contacts: [
                 {
                     name: 'Michele',
-                    user: './img/avatar_1.jpg',                    visible: true,
+                    user: './img/avatar_1.jpg',   
+                    visible: true,
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -28,7 +29,8 @@ new Vue(
                 },
                 {
                     name: 'Fabio',
-                    user: './img/avatar_2.jpg',                    visible: true,
+                    user: './img/avatar_2.jpg',                    
+                    visible: true,
                     messages: [
                         {
                             date: '20/03/2020 16:30:00',
@@ -111,16 +113,13 @@ new Vue(
                 moveTob: function (index) {
                     this.indexMessage = index
                 },
-                contactMessage: function()
-                {
-                    for (let i = 0; i < contacts[i].lenght; i++) {
-                        if (this.contacts[indexContacts].messages[i].status === 'sent') {
+                contactMessage: function(index)
+                {   let sent = 'sent'
+                        if (this.contacts[index].messages[indexMessage].status === sent) {
                             return 'textSend'
                        } else {
                            return 'textRecived'
-                       }
-                        
-                    }
+                        }
                 },
              }
          }

@@ -58,7 +58,7 @@
             <div class="text-area">
                 
                 <div :class="contactMessage()" v-for="(contact,index) in contacts" >
-                    {{contact.messages.text}}
+                    {{contact.messages[indexMessage].text}}
                 </div>
  
             </div>
