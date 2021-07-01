@@ -118,9 +118,9 @@ span>a
     flex-direction: column;
     justify-content: flex-end;
 }
-.textRecived:hover , .textSend:hover
+.textRecived:active , .textSend:active
 {
-    filter: invert(1);
+    filter: sepia(60%);
 }
 .text-area .textSend
 {
