@@ -7,9 +7,7 @@ new Vue(
             contacts: [
                 {
                     name: 'Michele',
-                    user: './img/avatar_1.jpg',
-                    avatar: '_1',
-                    visible: true,
+                    user: './img/avatar_1.jpg',                    visible: true,
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -30,9 +28,7 @@ new Vue(
                 },
                 {
                     name: 'Fabio',
-                    user: './img/avatar_2.jpg',
-                    avatar: '_2',
-                    visible: true,
+                    user: './img/avatar_2.jpg',                    visible: true,
                     messages: [
                         {
                             date: '20/03/2020 16:30:00',
@@ -54,8 +50,6 @@ new Vue(
                 {
                     name: 'Samuele',
                     user: './img/avatar_3.jpg',
-
-                    avatar: '_3',
                     visible: true,
                     messages: [
                         {
@@ -78,8 +72,6 @@ new Vue(
                 {
                     name: 'Luisa',
                     user: './img/avatar_4.jpg',
-
-                    avatar: '_4',
                     visible: true,
                     messages: [
                         {
@@ -111,12 +103,24 @@ new Vue(
                     this.next();
                 }, interval);
              },
-             methods: {
+             methods: 
+             {
                  moveTo: function (index) {
                      this.indexContacts = index
-                 }, //come lo uso per scrivere i messaggi 
+                 },  
                 moveTob: function (index) {
                     this.indexMessage = index
+                },
+                contactMessage: function()
+                {
+                    for (let i = 0; i < contacts[i].lenght; i++) {
+                        if (this.contacts[indexContacts].messages[i].status === 'sent') {
+                            return 'textSend'
+                       } else {
+                           return 'textRecived'
+                       }
+                        
+                    }
                 },
              }
          }

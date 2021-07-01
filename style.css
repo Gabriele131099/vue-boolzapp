@@ -17,6 +17,7 @@
 .scroll
 {
     overflow-y:scroll;
+    list-style-type: none;
 }
 .contact-list,.message-chat
 {
@@ -112,8 +113,50 @@ span>a
     overflow-y: scroll;
 }
 
+.text-area .textSend
+{
+    background-color: greenyellow;
+    width: 300px;
+    padding: 10px;
+    border-radius: 30px  30px 30px 0px;
+    margin: 10px;
+}
+
+.text-area .textRecived
+{
+    background-color: greenyellow;
+    width: 300px;
+    padding: 10px;
+    border-radius: 30px  0px 30px 30px;
+    margin: 10px;
+    float: right;
+    text-align: left;
+}
+
 .nav-typing
 {
     height: 90px;
     background-color: lightgray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
 }
+.nav-typing input
+{
+    width: 400px;
+    border-radius: 15px;
+    padding: 10px;
+    outline: none;
+}
+.nav-typing i
+{
+    font-size: 24px;
+}
+.date
+{
+    font-size: 12px;
+    color: gray;
+    text-align: right;
+}
+
