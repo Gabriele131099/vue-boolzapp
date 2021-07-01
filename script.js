@@ -113,10 +113,10 @@ new Vue(
                 moveTob: function (index) {
                     this.indexMessage = index
                 },
-                contactMessage: function(index)
+                contactMessage: function()
                 {   let sent = 'sent'
-                    let status = contacts[indexContacts].messages[indexMessage].status
-                        if (status === sent) {
+                    let status = this.contacts[indexContacts].messages[indexMessage].status
+                        if (status === this.sent) {
                             return 'textSend'
                        } else {
                            return 'textRecived'
