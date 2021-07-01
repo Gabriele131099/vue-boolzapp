@@ -57,10 +57,10 @@
             </div>
             <div class="text-area">
                 
-                <div class="">
-                    <div :class="contactMessage(index)" v-for="(message,index) in contacts[indexContacts].messages" >
-                        <div>{{message.text}} </div>
-                       <div class="date"> {{message.date}} {{message.status}}</div>
+                <div v-for="(message,index) in contacts[indexContacts].messages">
+                    <div :class="contactMessage(index)">
+                        <div>{{message.text}}</div>
+                        <div class="date"> {{message.date}} {{message.status}}</div>
                     </div>
                 </div>
  
