@@ -115,7 +115,8 @@ new Vue(
                 },
                 contactMessage: function(index)
                 {   let sent = 'sent'
-                        if (this.contacts[index].messages[indexMessage].status === sent) {
+                    let status = contacts[indexContacts].messages[indexMessage].status
+                        if (status === sent) {
                             return 'textSend'
                        } else {
                            return 'textRecived'
