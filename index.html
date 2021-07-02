@@ -57,6 +57,12 @@
             </div>
             <div class="text-area">
                 <div :class="contactMessage(index)" v-for="(message,index) in contacts[indexContacts].messages">
+                    <i class="fas fa-chevron-down tenda">
+                        <div>
+                            <a href="">Message info</a> <br>
+                            <a href="">Delete Message</a> <br>
+                        </div>
+                    </i>
                     <div>{{message.text}}</div>
                     <div class="date"> {{message.date}} {{message.status}}</div>
                 </div>
