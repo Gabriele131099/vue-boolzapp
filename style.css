@@ -60,6 +60,10 @@ img
     color: lightskyblue;
     margin: 0px 5px;
 }
+.circle:hover
+{
+    filter: drop-shadow(16px 16px 20px grey);
+}
 span>a
 {
     color: black;
@@ -169,3 +173,13 @@ span>a
     text-align: right;
 }
 
+i,img
+{
+    cursor: pointer;
+}
+
+img:active
+{
+    width: 200px;
+    height: 200px;  
+}

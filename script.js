@@ -98,7 +98,7 @@ new Vue(
             ],
             indexContacts :0,
             indexMessage:0,
-            newTask : ''
+            newTask : '',
             },
 
             created(){
@@ -110,7 +110,33 @@ new Vue(
              {
                  moveTo: function (index) {
                      this.indexContacts = index
+                 },
+                 sendMessage: function () {
+                    const data = new Date();
+                    let gg,mm,aaaa,Hh,Mm,Ss;
+                    Hh = data.getHours() + ":";
+                    Mm = data.getMinutes() + ":";
+                    Ss = data.getSeconds() ;
+                    gg = data.getDate() + "/";
+                    mm = data.getMonth() + 1 + "/";
+                    aaaa = data.getFullYear() + " ";
+                    this.contacts[this.indexContacts].messages.push({
+                         date:gg+mm+aaaa+' '+Hh+Mm+Ss,
+                         text: this.newTask,
+                         status: 'sent',
+                    })
+                    setInterval(this.contacts[this.indexContacts].messages.push({
+                        date:gg+mm+aaaa+' '+Hh+Mm+Ss,
+                        text: 'Ok',
+                        status: 'received',
+                   }),3000)
+                    
+
+                     newTask= ''
                  },  
+                 resetInput() {
+                    this.newTask = "";
+                  },
                 contactMessage: function(index)
                 {   
                     let status = this.contacts[this.indexContacts].messages[index].status
@@ -120,8 +146,7 @@ new Vue(
                            return 'textRecived'
                         }
                 },
-             }
-         }
-         
-      );
+            }
+        } 
+    );
 
