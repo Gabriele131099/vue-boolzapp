@@ -72,7 +72,7 @@ new Vue(
                     ],
                 },
                 {
-                    name: 'Luisa',
+                    name: 'Luisa Calcetto',
                     user: './img/avatar_4.jpg',
                     visible: true,
                     messages: [
@@ -86,11 +86,6 @@ new Vue(
                             text: 'Si, ma preferirei andare al cinema',
                             status: 'received'
                         },
-                        {
-                            date: '10/01/2020 15:50:00',
-                            text: 'Si, ma preferirei andare al cinema',
-                            status: 'received'
-                        },
                     ],
                     
                     
@@ -98,6 +93,7 @@ new Vue(
             ],
             indexContacts :0,
             indexMessage:0,
+            searchTask:0,
             newTask : '',
             },
 
@@ -127,7 +123,7 @@ new Vue(
                     })
                     setInterval(this.contacts[this.indexContacts].messages.push({
                         date:gg+mm+aaaa+' '+Hh+Mm+Ss,
-                        text: 'Ok',
+                        text: 'Non è il caso che continui a scrivermi, forse è meglio se non ci sentiamo più',
                         status: 'received',
                    }),3000)
                     
@@ -144,7 +140,14 @@ new Vue(
                 },
                 deleteTask: function(index){
                     this.contacts[this.indexContacts].messages.splice(index, 1)
-                },      
+                }, 
+                searchUser: function (index) {
+                    if (this.searchTask === this.contacts[index].name) {
+                        
+                    } else {
+                        
+                    }
+                }     
     
                 
             }
