@@ -142,6 +142,10 @@ new Vue(
                            return 'textRecived'
                         }
                 },
+                deleteTask: function(index){
+                    this.contacts[this.indexContacts].messages.splice(index, 1)
+                },      
+    
                 
             }
         } 

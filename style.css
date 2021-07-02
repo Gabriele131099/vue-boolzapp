@@ -214,18 +214,12 @@ img:active
     position: absolute;
     padding: 10px 5px;
 }
-.textRecived>.tenda>div
+.tenda>div
 {
     top: 0px;
     right: 0px;
 }
-.textSend>.tenda>div
-{
-    top:0px;
-    left: 0px;
-    
-}
-.tenda>div>a
+.tenda>div>div
 {
     font-size: 14px;
     color: grey;
