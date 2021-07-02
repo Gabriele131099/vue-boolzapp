@@ -131,12 +131,8 @@ new Vue(
                         status: 'received',
                    }),3000)
                     
-
-                     newTask= ''
+                    this.newTask= ''
                  },  
-                 resetInput() {
-                    this.newTask = "";
-                  },
                 contactMessage: function(index)
                 {   
                     let status = this.contacts[this.indexContacts].messages[index].status
@@ -146,6 +142,7 @@ new Vue(
                            return 'textRecived'
                         }
                 },
+                
             }
         } 
     );
