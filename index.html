@@ -40,12 +40,18 @@
                 <i class="fas fa-search"></i>
                 <input type="text" placeholder="Inizia una nuova chat" v-model="searchTask" @keyup.enter="searchUser" value="Cerca un tuo contato">
             </div>
-            <ul class="scroll">
-                <li v-for="(contatto, index) in contacts" @click="moveTo(index)" class=" manina-puntatore">
-                    <img :src="contatto.user" alt="">
-                    {{contatto.name}}
-                </li>
-            </ul>
+            <div  class="scroll">
+                <ul>
+                    <li v-for="(contatto, index) in contacts" @click="moveTo(index)" class=" manina-puntatore">
+                        <img :src="contatto.user" alt="">
+                        <span class="p-3">
+                            <div>{{contatto.name}}</div>
+                            <div class="date float">{{contatto.number}}</div>
+                        </span>
+                    </li>
+                    <li><button @click='addUser'>Aggiungi Utente</button></li>
+                </ul>
+            </div>
         </aside>
         <section class="message-chat col-xs-6 col-md-5 col-xl-4">
            <div class="nav-user">

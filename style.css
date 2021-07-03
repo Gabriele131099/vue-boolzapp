@@ -17,7 +17,9 @@
 .scroll
 {
     overflow-y:scroll;
-    list-style-type: none;
+    position: sticky;
+    height: 57vh;
+
 }
 .contact-list,.message-chat
 {
@@ -70,7 +72,7 @@ span>a
 }
 .search
 {
-  margin: 5px;  
+    margin: 5px;  
     border: lightgray 1px solid;
 }
 .search i{
@@ -84,6 +86,10 @@ span>a
     padding: 5px 5px;
  
 }
+.scroll ul
+{
+    list-style-type: none;
+}
 .nav-notifica
 {
     display: flex;
@@ -96,6 +102,8 @@ span>a
     height: 90px;
     cursor:pointer;
     padding: 10px;
+    display: flex;
+    align-items: center;
     border-bottom:1px solid rgb(245, 242, 242);
 }
 .manina-puntatore:hover
@@ -148,7 +156,15 @@ span>a
     margin: 10px;
     word-wrap: break-word;
 }
-
+.text-area .new
+{
+    border-radius: 20px;
+    background-color: lightgray;
+    width: 100%;
+    text-align: center;
+    padding: 10px;    
+    margin-bottom: 20px;
+}
 .nav-typing
 {
     height: 90px;

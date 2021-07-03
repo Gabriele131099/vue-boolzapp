@@ -8,6 +8,7 @@ new Vue(
                 {
                     name: 'Michele',
                     user: './img/avatar_1.jpg',   
+                    number: '3486557084',
                     visible: true,
                     messages: [
                         {
@@ -29,7 +30,8 @@ new Vue(
                 },
                 {
                     name: 'Fabio',
-                    user: './img/avatar_2.jpg',                    
+                    user: './img/avatar_2.jpg', 
+                    number: '3429857024',                   
                     visible: true,
                     messages: [
                         {
@@ -52,6 +54,7 @@ new Vue(
                 {
                     name: 'Fausto',
                     user: './img/avatar_3.jpg',
+                    number: '3487508710',
                     visible: true,
                     messages: [
                         {
@@ -72,8 +75,9 @@ new Vue(
                     ],
                 },
                 {
-                    name: 'Luisa Calcetto',
+                    name: 'Luisa',
                     user: './img/avatar_4.jpg',
+                    number: '3339055743',
                     visible: true,
                     messages: [
                         {
@@ -95,6 +99,8 @@ new Vue(
             indexMessage:0,
             searchTask:'',
             newTask : '',
+            searchTask: "",
+
             },
 
           
@@ -126,12 +132,16 @@ new Vue(
                         text= 'bene dai, tu?'
                     }else if (this.newTask === 'male' || this.newTask.includes('così così')) {
                         text='dai dai, si sistema'
-                    } else if (this.newTask.includes('')) {
-                        text='mangiamo pollo?'
+                    } else if (this.newTask.includes('pizza')) {
+                        text='prima pollo?'
                     }else if (this.newTask.includes('vado')) {
                         text='eja, ci sentiamo dopo'
-                    } else if(this.newTask.length >= 40){
+                    } else if(this.newTask.length >= 30){
                         text= 'mi dispice, vedrai che si sistema, per ora posso girare un pollo'
+                    }else if(this.newTask.includes('morto') || this.newTask.includes('morta')){
+                        text= 'Dai morto un papa si fa un dromedario'
+                    }else {
+                        text= 'dimmi tutto'
                     }
                         
                     
@@ -145,19 +155,44 @@ new Vue(
                                     
                         this.newTask= ''
                  },  
+                 addUser: function () {
+                    let names = prompt('Inserisci il nome del contatto')
+                    this.contacts.push({
+
+                        name: names,
+                        user: './img/avatar_.none.jpg',   
+                        number: prompt('inserire il numero di telefono di ' + names),
+                        visible: true,
+                        messages: [
+                            {
+                                date: 'ora',
+                                text: 'La chat con ' + names + ' è attiva',
+                                status: 'new'
+                            },
+                            
+                        ],
+
+                    })
+
+                        this.newTask= ''
+
+                 },  
+
                 
                 contactMessage: function(index)
                 {   
                     let status = this.contacts[this.indexContacts].messages[index].status
                         if (status === 'sent') {
                             return 'textSend'
-                        }else {
+                        }else if (status === 'new') {
+                            return 'new'
+                        } else {
                            return 'textRecived'
                         }
                 },
                 deleteTask: function(index){
                     this.contacts[this.indexContacts].messages.splice(index, 1)
-                }, 
+                },
                }                 
             }
          
@@ -165,5 +200,3 @@ new Vue(
 
 
 
-    let array =[0,0,0,0,0,0,0,0,0,0,0,]
-    console.log(array.length)
