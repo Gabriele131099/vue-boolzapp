@@ -50,7 +50,7 @@ new Vue(
                     ],
                 },
                 {
-                    name: 'Samuele',
+                    name: 'Fausto',
                     user: './img/avatar_3.jpg',
                     visible: true,
                     messages: [
@@ -93,19 +93,25 @@ new Vue(
             ],
             indexContacts :0,
             indexMessage:0,
-            searchTask:0,
+            searchTask:'',
             newTask : '',
             },
 
-            created(){
-                setInterval(() => {
-                    this.next();
-                }, interval);
-             },
+          
+                
              methods: 
              {
                  moveTo: function (index) {
                      this.indexContacts = index
+                 },
+                 messaggioCasuale: function () {
+                    let texxt= ''
+                    if (this.newTask==='ciao') {
+                        text='ciao'
+                    }else if(this.newTask==='come stai?'){
+                        text= 'bene dai, tu?'
+                    }
+                     return text
                  },
                  sendMessage: function () {
                     const data = new Date();
@@ -121,14 +127,34 @@ new Vue(
                          text: this.newTask,
                          status: 'sent',
                     })
-                    setInterval(this.contacts[this.indexContacts].messages.push({
-                        date:gg+mm+aaaa+' '+Hh+Mm+Ss,
-                        text: 'Non è il caso che continui a scrivermi, forse è meglio se non ci sentiamo più',
-                        status: 'received',
-                   }),3000)
+                    let text;
+                      this.newTask;
+                    if (this.newTask.includes('ciao')) {
+                        text='ciao'
+                    }else if(this.newTask.includes('come stai')){
+                        text= 'bene dai, tu?'
+                    }else if (this.newTask === 'male' || this.newTask.includes('così così')) {
+                        text='cosa è successo?'
+                    } else if (this.newTask.includes('bene')) {
+                        text='mangiamo pollo?'
+                    }else if (this.newTask.includes('vado')) {
+                        text='eja, ci sentiamo dopo'
+                    } else if(this.newTask.length >= 40){
+                        text= 'mi dispice, vedrai che si sistema, per ora posso girare un pollo'
+                    }
+                        
                     
-                    this.newTask= ''
+                        setTimeout(() => {
+                            this.contacts[this.indexContacts].messages.push({
+                            date:gg+mm+aaaa+' '+Hh+Mm+Ss,
+                            text: text,
+                            status: 'received'
+                        })
+                        }, 3000);
+                                    
+                        this.newTask= ''
                  },  
+                
                 contactMessage: function(index)
                 {   
                     let status = this.contacts[this.indexContacts].messages[index].status
@@ -141,16 +167,12 @@ new Vue(
                 deleteTask: function(index){
                     this.contacts[this.indexContacts].messages.splice(index, 1)
                 }, 
-                searchUser: function (index) {
-                    if (this.searchTask === this.contacts[index].name) {
-                        
-                    } else {
-                        
-                    }
-                }     
-    
-                
+               }                 
             }
-        } 
+         
     );
 
+
+
+    let array =[0,0,0,0,0,0,0,0,0,0,0,]
+    console.log(array.length)
