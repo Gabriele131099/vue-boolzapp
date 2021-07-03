@@ -155,12 +155,15 @@ new Vue(
                                     
                         this.newTask= ''
                  },  
+
                  addUser: function () {
                     let names = prompt('Inserisci il nome del contatto')
+                    let num = 8
+                    console.log(num)
                     this.contacts.push({
 
                         name: names,
-                        user: './img/avatar_.none.jpg',   
+                        user: './img/avatar_'+ num +'.jpg',   
                         number: prompt('inserire il numero di telefono di ' + names),
                         visible: true,
                         messages: [
