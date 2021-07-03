@@ -104,15 +104,7 @@ new Vue(
                  moveTo: function (index) {
                      this.indexContacts = index
                  },
-                 messaggioCasuale: function () {
-                    let texxt= ''
-                    if (this.newTask==='ciao') {
-                        text='ciao'
-                    }else if(this.newTask==='come stai?'){
-                        text= 'bene dai, tu?'
-                    }
-                     return text
-                 },
+
                  sendMessage: function () {
                     const data = new Date();
                     let gg,mm,aaaa,Hh,Mm,Ss;
@@ -127,15 +119,14 @@ new Vue(
                          text: this.newTask,
                          status: 'sent',
                     })
-                    let text;
-                      this.newTask;
+                    let text = '';
                     if (this.newTask.includes('ciao')) {
-                        text='ciao'
+                        text+='ciao'
                     }else if(this.newTask.includes('come stai')){
                         text= 'bene dai, tu?'
                     }else if (this.newTask === 'male' || this.newTask.includes('così così')) {
-                        text='cosa è successo?'
-                    } else if (this.newTask.includes('bene')) {
+                        text='dai dai, si sistema'
+                    } else if (this.newTask.includes('')) {
                         text='mangiamo pollo?'
                     }else if (this.newTask.includes('vado')) {
                         text='eja, ci sentiamo dopo'
