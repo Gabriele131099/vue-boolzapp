@@ -98,15 +98,24 @@ new Vue(
             indexContacts :0,
             indexMessage:0,
             searchTask:'',
+            colore: 'scuro',
             newTask : '',
             searchTask: "",
+            emoticon: '',
 
             },
-
-          
-                
+    
              methods: 
              {
+                 searchUser: function () {
+                     this.contacts.forEach(contact => {
+                         if (contact.name.includes(this.searchTask)) {
+                             contact.visible  = true
+                         } else{
+                            contact.visible = false
+                         }
+                     });
+                 },
                  moveTo: function (index) {
                      this.indexContacts = index
                  },
@@ -130,7 +139,7 @@ new Vue(
                         text+='ciao'
                     }else if(this.newTask.includes('come stai')){
                         text= 'bene dai, tu?'
-                    }else if (this.newTask === 'male' || this.newTask.includes('così così')) {
+                    }else if (this.newTask.includes('male') || this.newTask.includes('così così')) {
                         text='dai dai, si sistema'
                     } else if (this.newTask.includes('pizza')) {
                         text='prima pollo?'
@@ -196,6 +205,26 @@ new Vue(
                 deleteTask: function(index){
                     this.contacts[this.indexContacts].messages.splice(index, 1)
                 },
+                deleteUsers: function(index){
+                    this.contacts[this.indexContacts].splice(index, 1)
+                },
+                themeStyleClass: function () {
+                    //versione estea
+                   /*  if(this.colore ===  'scuro'){
+                        return 'darkTemplate'
+                    } else {
+                        return 'whiteTemplate'
+                    } */
+                    //versione con operatore ternario
+                    return this.colore === 'scuro' ? 'darkTemplate' : 'whiteTemplate'
+                  
+                },
+                changeColor: function () {
+                    this.colore = this.colore === 'scuro' ? 'bianco' :'scuro'
+                },
+                emoticon: function () {
+                    
+                }
                }                 
             }
          

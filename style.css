@@ -1,3 +1,4 @@
+
 #green-row
 {
     background-color: green;
@@ -105,6 +106,7 @@ span>a
     padding: 10px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border-bottom:1px solid rgb(245, 242, 242);
 }
 .manina-puntatore:hover
@@ -253,4 +255,8 @@ img:active
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
     padding: 5px;
+}
+.darkTemplate
+{
+    filter: invert(1);
 }
